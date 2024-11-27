@@ -7,11 +7,32 @@ from django.urls import reverse
 from .models import User, Category, Listing
 
 
+def listing(request, id):
+    listingData = Listing.objects.get(pk=id)
+    return render(request, "auctions/listing.html", {
+        "listing": listingData
+    })
+
+
 def index(request):
     activeListings = Listing.objects.filter(isActive=True)
+    allCategories = Category.objects.all()
     return render(request, "auctions/index.html",{
-        "Listings": activeListings
+        "listings": activeListings,
+        "categories": allCategories,
     })
+
+
+def displayCategory(request):
+    if request.method == "POST":
+        categoryFromForm = request.POST['category']
+        category = Category.objects.get(categoryName=categoryFromForm)
+        activeListings = Listing.objects.filter(isActive=True,category=category)
+        allCategories = Category.objects.all()
+        return render(request, "auctions/index.html",{
+            "listings": activeListings,
+            "categories": allCategories,
+        })
 
 
 def createListing(request):
