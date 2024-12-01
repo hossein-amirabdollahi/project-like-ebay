@@ -42,3 +42,61 @@ An e-commerce platform inspired by eBay, designed to enable users to buy and sel
    ```bash
    git clone https://github.com/hossein-amirabdollahi/project-like-ebay.git
    cd project-like-ebay
+
+2. Set up a virtual environment:  
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # For Windows, use `venv\Scripts\activate`
+
+3. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
+
+4. Apply migrations:  
+   ```bash
+   python manage.py migrate
+
+1. Run the development server:  
+   ```bash
+   python manage.py runserver
+
+---
+
+## Usage
+
+- Navigate to `http://127.0.0.1:8000` in your browser to explore the platform.  
+- Register a user to create product listings or browse the marketplace.  
+- Use the admin panel (`/admin`) for administrative actions (requires superuser account).  
+
+---
+
+## Screenshots
+
+_Include screenshots of your app in action. You can add images like this:_
+
+---
+
+## Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m "Add feature-name"`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+## Contact
+
+Hossein Amirabdollahi – hosseinamirabdollahi8@gmail.com
+
+GitHub: [@hossein-amirabdollahi](https://github.com/hossein-amirabdollahi)
+
